@@ -61,3 +61,5 @@ Dark Mode support
 Real-time order status notifications
 
 ##  👨‍💻 Author
+
+Contact: levietthy03@gmail.com
