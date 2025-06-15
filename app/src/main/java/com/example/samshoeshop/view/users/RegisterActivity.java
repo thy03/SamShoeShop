@@ -70,7 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
                 dbRef.child(uid).setValue(user);
 
                 Toast.makeText(this, "Register successful", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, LoginActivity.class));
                 finish();
             } else {
                 Toast.makeText(this, "Register failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

@@ -18,6 +18,9 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        // ❗ Luôn signOut mỗi lần mở app
+        FirebaseAuth.getInstance().signOut();
+
         new Handler().postDelayed(() -> {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
