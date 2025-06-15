@@ -13,7 +13,16 @@
         android:theme="@style/Theme.SamShoeShop"
         tools:targetApi="31">
         <activity
+            android:name=".view.users.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.users.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.users.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.users.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
