@@ -21,6 +21,10 @@
         <activity
             android:name=".view.users.MainActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".view.users.HomeActivity"
+            android:exported="false" />
         <activity
             android:name=".view.users.SplashActivity"
             android:exported="true">
