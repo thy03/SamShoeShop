@@ -36,7 +36,7 @@ android {
 dependencies {
 
     // Import the Firebase BoM
-    implementation ( platform ( "com.google.firebase:firebase-bom:33.15.0" ))
+    implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
 
 
     // TODO: Add the dependencies for Firebase products you want to use
@@ -49,6 +49,23 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.firebase.firestore)
+
+    // ViewModel và LiveData (Jetpack Architecture Components)
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.livedata)
+    implementation(libs.androidx.lifecycle.runtime)
+
+    // RecyclerView
+    implementation(libs.androidx.recyclerview)
+
+    implementation(libs.androidx.cardview)
+
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
+
+    implementation(libs.gson)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

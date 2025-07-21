@@ -1,139 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF">
+    android:padding="16dp"
+    android:background="#FFE4E1">
 
-    <!-- Pink Top Section -->
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_cart"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:background="#FFD0D0"
-        android:padding="16dp">
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        tools:listitem="@layout/item_cart"/>
 
-        <!-- Header -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
+    <TextView
+        android:id="@+id/txt_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: $0.00"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp"
+        tools:ignore="HardcodedText" />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_back"
-                android:contentDescription="Back" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="My Cart"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:textColor="#000000" />
-        </RelativeLayout>
-
-        <!-- Cart Items -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Item -->
-            <include layout="@layout/item_cart_product" />
-            <include layout="@layout/item_cart_product" />
-            <include layout="@layout/item_cart_product" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Bottom Summary Section -->
-    <LinearLayout
+    <Button
+        android:id="@+id/btn_checkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#FFFFFF"
-        android:elevation="4dp"
-        android:padding="16dp">
-
-        <!-- Subtotal -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Subtotal"
-                android:textColor="#888888" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$1250.00"
-                android:textStyle="bold"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <!-- Shopping -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Shopping"
-                android:textColor="#888888" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$40.90"
-                android:textStyle="bold"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <!-- Total Cost -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Total Cost"
-                android:textStyle="bold"
-                android:textColor="#000000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$1690.99"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <!-- Checkout Button -->
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Checkout"
-            android:backgroundTint="#5DA3FA"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:padding="12dp" />
-    </LinearLayout>
+        android:text="Checkout"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#FF69B4"
+        android:textColor="#FFFFFF" />
 </LinearLayout>
